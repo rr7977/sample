@@ -77,3 +77,8 @@ target/
 *.jar
 *.war
 *.ear
+
+# IDE Plugins
+*.vscode
+.checkstyle
+rebel.xml
