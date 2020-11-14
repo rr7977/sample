@@ -1,0 +1,79 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+.metadata
+.gradle
+bin/
+tmp/
+*.log
+*.tmp
+*.bak
+*.swp
+*~.nib
+.settings/
+.loadpath
+.factorypath
+*local.properties
+build*.properties
+build*.xml
+dist/
+.apt_generated/
+.recommenders/
+.sonatype
+
+# IDE Plugins
+.checkstyle
+rebel.xml
+
+# Eclipse Core
+.project
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# PDT-specific
+.buildpath
+
+# Mac
+.DS_Store
+
+# Maven
+dependency-reduced-pom.xml
+log/
+target/
+
+# binary java files
+*.class
+*.jar
+*.war
+*.ear

@@ -1,0 +1,21 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug (Attach) - Remote",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 8787
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-Application<sample>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.example.sample.Application",
+      "projectName": "sample",
+      "args": ""
+    }
+  ]
+}
