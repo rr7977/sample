@@ -1,15 +1,13 @@
-package com.example.sample.web.sedgewick.sort;
+package com.example.sample.sort;
 
 import org.apache.commons.lang3.ArrayUtils;
 
 public class ShellSort {
 
-  private ShellSort() {
-  }
+  private ShellSort() {}
 
-  public static String sort(String s) {
+  public static void sort(int[] a) {
 
-    char[] a = s.toCharArray();
     int n = a.length;
     int h = 1;
 
@@ -29,6 +27,5 @@ public class ShellSort {
       h = h / 3;
     }
 
-    return String.valueOf(a);
   }
 }

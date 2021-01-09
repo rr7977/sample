@@ -1,4 +1,4 @@
-package com.example.sample.web.sedgewick.sort;
+package com.example.sample.sort;
 
 public class MergeSort {
 
