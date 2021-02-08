@@ -1,4 +1,4 @@
-package com.example.sample.sort;
+package com.example.sample.sort.practice;
 
 import org.apache.commons.lang3.ArrayUtils;
 

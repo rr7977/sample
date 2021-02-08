@@ -1,4 +1,4 @@
-package com.example.sample.sort;
+package com.example.sample.sort.practice;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.Random;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SortTest {
+class SortPracticeTest {
 
   static int[] a = new Random().ints(100000).toArray();
 
@@ -18,39 +18,39 @@ class SortTest {
   }
 
   @Test
-  void bubbleSortTest() {
-    BubbleSort.sort(a);
+  void bubbleSortPracticeTest() {
+    BubbleSortPractice.sort(a);
     assertTrue(ArrayUtils.isSorted(a));
   }
 
   @Test
-  void selectionSortTest() {
-    SelectionSort.sort(a);
+  void selectionSortPracticeTest() {
+    SelectionSortPractice.sort(a);
     assertTrue(ArrayUtils.isSorted(a));
   }
 
   @Test
-  void insertionSortTest() {
-    InsertionSort.sort(a);
+  void insertionSortPracticeTest() {
+    InsertionSortPractice.sort(a);
     assertTrue(ArrayUtils.isSorted(a));
   }
 
   @Test
-  void shellSortTest() {
-    ShellSort.sort(a);
+  void shellSortPracticeTest() {
+    ShellSortPractice.sort(a);
     assertTrue(ArrayUtils.isSorted(a));
   }
 
   @Test
-  void mergeSortTest() {
-    MergeSort.sort(a);
+  void mergeSortPracticeTest() {
+    MergeSortPractice.sort(a);
     assertTrue(ArrayUtils.isSorted(a));
   }
 
 
   @Test
-  void quickSortTest() {
-    QuickSort.sort(a);
+  void quickSortPracticeTest() {
+    QuickSortPractice.sort(a);
     assertTrue(ArrayUtils.isSorted(a));
   }
 

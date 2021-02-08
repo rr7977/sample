@@ -1,4 +1,4 @@
-package com.example.sample.sort;
+package com.example.sample.sort.practice;
 
 public class MergeSortPractice {
 
