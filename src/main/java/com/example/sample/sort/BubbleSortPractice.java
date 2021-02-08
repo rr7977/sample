@@ -2,26 +2,21 @@ package com.example.sample.sort;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-public class BubbleSort {
+public class BubbleSortPractice {
 
-  private BubbleSort() {
+  private BubbleSortPractice() {
   }
 
-  /**
-   * 28 seconds for 100,000 random integers
-   */
   public static int[] sort(int[] a) {
 
+    // Following solution can be enhanced by adding a swapped flag to break outer for loop if no
+    // swaps were made during any of the inner loops.
+
     for (int i = a.length - 1; i > 0; i--) {
-      boolean swapped = false;
       for (int j = 0; j < i; j++) {
         if (a[j] > a[j + 1]) {
           ArrayUtils.swap(a, j, j + 1);
-          swapped = true;
         }
-      }
-      if (!swapped) {
-        break;
       }
     }
     return a;

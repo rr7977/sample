@@ -24,8 +24,20 @@ class SortTest {
   }
 
   @Test
+  void bubbleSortPracticeTest() {
+    BubbleSortPractice.sort(a);
+    assertTrue(ArrayUtils.isSorted(a));
+  }
+
+  @Test
   void selectionSortTest() {
     SelectionSort.sort(a);
+    assertTrue(ArrayUtils.isSorted(a));
+  }
+
+  @Test
+  void selectionSortPracticeTest() {
+    SelectionSortPractice.sort(a);
     assertTrue(ArrayUtils.isSorted(a));
   }
 
@@ -36,8 +48,45 @@ class SortTest {
   }
 
   @Test
+  void insertionSortPracticeTest() {
+    InsertionSortPractice.sort(a);
+    assertTrue(ArrayUtils.isSorted(a));
+  }
+
+  @Test
   void shellSortTest() {
     ShellSort.sort(a);
+    assertTrue(ArrayUtils.isSorted(a));
+  }
+
+  @Test
+  void shellSortPracticeTest() {
+    ShellSortPractice.sort(a);
+    assertTrue(ArrayUtils.isSorted(a));
+  }
+
+  @Test
+  void mergeSortTest() {
+    MergeSort.sort(a);
+    assertTrue(ArrayUtils.isSorted(a));
+  }
+
+  @Test
+  void mergeSortPracticeTest() {
+    MergeSortPractice.sort(a);
+    assertTrue(ArrayUtils.isSorted(a));
+  }
+
+
+  @Test
+  void quickSortTest() {
+    QuickSort.sort(a);
+    assertTrue(ArrayUtils.isSorted(a));
+  }
+
+  @Test
+  void quickSortPracticeTest() {
+    QuickSortPractice.sort(a);
     assertTrue(ArrayUtils.isSorted(a));
   }
 

@@ -4,8 +4,10 @@ import org.apache.commons.lang3.ArrayUtils;
 
 public class SelectionSort {
 
-  private SelectionSort() {}
+  private SelectionSort() {
+  }
 
+  // 4 seconds for 100,000 sample of integers
   public static void sort(int[] a) {
 
     for (int i = 0; i < a.length; i++) {

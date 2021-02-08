@@ -25,8 +25,6 @@ public class P23Controller {
   @GetMapping("/squareRoot/{n}")
   public double squareRoot(@PathVariable double c) {
 
-    // TODO /sedgewick/p23/squareRoot
-
     if (c < 0) {
       return Double.NaN;
     }

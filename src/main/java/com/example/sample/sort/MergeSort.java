@@ -31,15 +31,16 @@ public class MergeSort {
     int j = mid + 1;
 
     // Copy a[lo..hi] to aux[lo..hi]
-    for (int k = lo; k <= hi; k++) {
-      aux[k] = a[k];
-    }
+    System.arraycopy(a, lo, aux, lo, hi - lo + 1);
 
     // Merge back to a[lo..hi]
     for (int k = lo; k <= hi; k++) {
+      // If left half is exhausted, pick from right half
       if (i > mid) {
         a[k] = aux[j++];
-      } else if (j > hi) {
+      }
+      // If right half is exhausted, pick from left half
+      else if (j > hi) {
         a[k] = aux[i++];
       } else if (aux[j] < aux[i]) {
         a[k] = aux[j++];
