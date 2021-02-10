@@ -1,18 +1,10 @@
-package com.example.sample.web.sedgewick;
+package com.example.sample.matrix;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-
 import java.util.Arrays;
-
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-public class P21ControllerTest {
-
-  @Autowired
-  private P21Controller p21Controller;
+class MatrixMultiplicationTest {
 
   @Test
   void test_arrayMatrixMultiplication_squareMatrix() {
@@ -29,10 +21,10 @@ public class P21ControllerTest {
     System.out.println(Arrays.deepToString(a));
     System.out.println(Arrays.deepToString(b));
     int[][] expected = new int[3][3];
-    expected[0] = new int[] { 30, 36, 42 };
-    expected[1] = new int[] { 66, 81, 96 };
-    expected[2] = new int[] { 102, 126, 150 };
-    int[][] actual = this.p21Controller.arrayMatrixMultiplication(a, b);
+    expected[0] = new int[] {30, 36, 42};
+    expected[1] = new int[] {66, 81, 96};
+    expected[2] = new int[] {102, 126, 150};
+    int[][] actual = MatrixMultiplication.arrayMatrixMultiplication(a, b);
     System.out.println(Arrays.deepToString(actual));
     assertArrayEquals(expected, actual);
   }
@@ -58,9 +50,9 @@ public class P21ControllerTest {
     }
     System.out.println(Arrays.deepToString(b));
     int[][] expected = new int[2][1];
-    expected[0] = new int[] { 14 };
-    expected[1] = new int[] { 32 };
-    int[][] actual = this.p21Controller.arrayMatrixMultiplication(a, b);
+    expected[0] = new int[] {14};
+    expected[1] = new int[] {32};
+    int[][] actual = MatrixMultiplication.arrayMatrixMultiplication(a, b);
     System.out.println(Arrays.deepToString(actual));
     assertArrayEquals(expected, actual);
   }

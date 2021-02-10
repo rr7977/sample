@@ -5,9 +5,7 @@ import java.util.Random;
 import org.apache.commons.lang3.ArrayUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
 class SortPracticeTest {
 
   static int[] a = new Random().ints(100000).toArray();
