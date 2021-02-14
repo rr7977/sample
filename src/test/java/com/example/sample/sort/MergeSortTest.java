@@ -1,13 +1,29 @@
-package com.example.sample.sort.practice;
+package com.example.sample.sort;
 
-public class MergeSortPractice {
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.Random;
+import org.apache.commons.lang3.ArrayUtils;
+import org.junit.jupiter.api.Test;
 
-  private MergeSortPractice() {
+class MergeSortTest {
+
+  @Test
+  void testMergeSort() {
+    int[] a = new Random().ints(100000).toArray();
+    MergeSort.sort(a);
+    assertTrue(ArrayUtils.isSorted(a));
+  }
+
+  @Test
+  void testPractice() {
+    int[] a = new Random().ints(100000).toArray();
+    sortPractice(a);
+    assertTrue(ArrayUtils.isSorted(a));
   }
 
   private static int[] aux;
 
-  public static int[] sort(int[] a) {
+  static int[] sortPractice(int[] a) {
 
     aux = new int[a.length];
     sort(a, 0, a.length - 1);

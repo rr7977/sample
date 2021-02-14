@@ -1,18 +1,32 @@
-package com.example.sample.sort.practice;
+package com.example.sample.sort;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.Random;
 import org.apache.commons.lang3.ArrayUtils;
+import org.junit.jupiter.api.Test;
 
-public class QuickSortPractice {
+class QuickSortTest {
 
-  private QuickSortPractice() {
+  @Test
+  void testQuickSort() {
+    int[] a = new Random().ints(100000).toArray();
+    QuickSort.sort(a);
+    assertTrue(ArrayUtils.isSorted(a));
   }
 
-  public static int[] sort(int[] a) {
+  @Test
+  void testPractice() {
+    int[] a = new Random().ints(100000).toArray();
+    sortPractice(a);
+    assertTrue(ArrayUtils.isSorted(a));
+  }
+
+  static int[] sortPractice(int[] a) {
     sort(a, 0, a.length - 1);
     return a;
   }
 
-  private static void sort(int[] a, int lo, int hi) {
+  static void sort(int[] a, int lo, int hi) {
     if (lo >= hi) {
       return;
     }
@@ -21,7 +35,7 @@ public class QuickSortPractice {
     sort(a, pivotIndex + 1, hi);
   }
 
-  private static int partition(int[] a, int lo, int hi) {
+  static int partition(int[] a, int lo, int hi) {
 
     int pivot = a[lo];
     int i = lo;
