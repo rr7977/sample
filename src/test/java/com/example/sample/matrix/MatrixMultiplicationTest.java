@@ -2,11 +2,13 @@ package com.example.sample.matrix;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import java.util.Arrays;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class MatrixMultiplicationTest {
 
   @Test
+  @Disabled
   void test_arrayMatrixMultiplication_squareMatrix() {
     int[][] a = new int[3][3];
     int[][] b = new int[3][3];
@@ -30,6 +32,7 @@ class MatrixMultiplicationTest {
   }
 
   @Test
+  @Disabled
   void test_arrayMatrixMultiplication_rectangularMatrix() {
     int[][] a = new int[2][3];
     int[][] b = new int[3][1];

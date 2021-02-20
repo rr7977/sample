@@ -3,11 +3,13 @@ package com.example.sample.sort;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.Random;
 import org.apache.commons.lang3.ArrayUtils;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class InsertionSortTest {
 
   @Test
+  @Disabled
   void testInsertionSort() {
     int[] a = new Random().ints(100000).toArray();
     InsertionSort.sort(a);
@@ -15,6 +17,7 @@ class InsertionSortTest {
   }
 
   @Test
+  @Disabled
   void testPractice() {
     int[] a = new Random().ints(100000).toArray();
     sortPractice(a);
