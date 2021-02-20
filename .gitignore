@@ -26,7 +26,6 @@ hs_err_pid*
 .gradle
 bin/
 tmp/
-*.log
 *.tmp
 *.bak
 *.swp
@@ -41,10 +40,6 @@ dist/
 .apt_generated/
 .recommenders/
 .sonatype
-
-# IDE Plugins
-.checkstyle
-rebel.xml
 
 # Eclipse Core
 .project
@@ -72,13 +67,9 @@ dependency-reduced-pom.xml
 log/
 target/
 
-# binary java files
-*.class
-*.jar
-*.war
-*.ear
-
 # IDE Plugins
 *.vscode
 .checkstyle
 rebel.xml
+*.idea
+*.iml
