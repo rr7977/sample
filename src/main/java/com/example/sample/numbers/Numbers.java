@@ -32,11 +32,11 @@ public class Numbers {
   }
 
   public static String getBinaryString(int n) {
-    String result = "";
+    StringBuilder result = new StringBuilder();
     for (int i = n; i > 0; i /= 2) {
-      result = i % 2 + result;
+      result.insert(0, i % 2);
     }
-    return result;
+    return result.toString();
   }
 
 }

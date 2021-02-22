@@ -1,15 +1,14 @@
 package com.example.sample.datastructures;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.Iterator;
 import java.util.Random;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class StackUsingResizingArrayTest {
 
   @Test
-  @Disabled
   void test() {
     StackUsingResizingArray<Integer> s = new StackUsingResizingArray<>();
 
@@ -24,7 +23,6 @@ class StackUsingResizingArrayTest {
   }
 
   @Test
-  @Disabled
   void testPractice() {
     StackUsingResizingArrayPractice<Integer> s = new StackUsingResizingArrayPractice<>();
 
@@ -38,7 +36,7 @@ class StackUsingResizingArrayTest {
 
   }
 
-  class StackUsingResizingArrayPractice<E> implements Iterable<E> {
+  private static class StackUsingResizingArrayPractice<E> implements Iterable<E> {
 
     private static final int DEFAULT_CAPACITY = 10;
 
@@ -46,53 +44,54 @@ class StackUsingResizingArrayTest {
     private int top = -1;
 
     void push(E e) {
-      if (top == a.length - 1) {
-        resizeArray(2 * a.length);
+      if (this.top == this.a.length - 1) {
+        this.resizeArray(2 * this.a.length);
       }
-      a[++top] = e;
+      this.a[++this.top] = e;
     }
 
     E pop() {
-      if (top == -1) {
+      if (this.top == -1) {
         return null;
       }
-      if (top == a.length / 4) {
-        resizeArray(a.length / 2);
+      if (this.top == this.a.length / 4) {
+        this.resizeArray(this.a.length / 2);
       }
-      E temp = a[top--];
-      a[top] = null;
+      E temp = this.a[this.top--];
+      this.a[this.top] = null;
       return temp;
     }
 
     int size() {
-      return top + 1;
+      return this.top + 1;
     }
 
     boolean isEmpty() {
-      return top == -1;
+      return this.top == -1;
     }
 
     private void resizeArray(int capacity) {
       E[] temp = (E[]) new Object[capacity];
-      for (int i = 0; i < a.length; i++) {
-        temp[i] = a[i];
+      for (int i = 0; i < this.a.length; i++) {
+        temp[i] = this.a[i];
       }
-      a = temp;
+      this.a = temp;
     }
 
+    @Override
     public Iterator<E> iterator() {
       return new Iterator<>() {
 
-        private int current = top;
+        private int current = StackUsingResizingArrayPractice.this.top;
 
         @Override
         public boolean hasNext() {
-          return current >= 0;
+          return this.current >= 0;
         }
 
         @Override
         public E next() {
-          return a[current--];
+          return StackUsingResizingArrayPractice.this.a[this.current--];
         }
 
       };

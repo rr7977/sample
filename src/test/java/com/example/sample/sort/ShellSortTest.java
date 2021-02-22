@@ -1,15 +1,14 @@
 package com.example.sample.sort;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.util.Random;
 import org.apache.commons.lang3.ArrayUtils;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class ShellSortTest {
 
   @Test
-  @Disabled
   void testShellSort() {
     int[] a = new Random().ints(100000).toArray();
     ShellSort.sort(a);
@@ -17,7 +16,6 @@ class ShellSortTest {
   }
 
   @Test
-  @Disabled
   void testPractice() {
     int[] a = new Random().ints(100000).toArray();
     sortPractice(a);
